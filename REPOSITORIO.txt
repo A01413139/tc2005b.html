@@ -1,27 +1,2 @@
-Repositorio del Proyecto Web HTML - TC2005B
-===========================================
-
-Link del Repositorio:
+Repositorio:
 https://github.com/A01413139/tc2005b.html
-
-Descripción:
-Este proyecto contiene un sitio web con múltiples páginas HTML, incluyendo:
-- Página de Login (index.html)
-- Página de Inicio (inicio.html)
-- Página de Perfil (perfil.html)
-- Página de Etiquetas HTML (tags.html)
-- Página About (about.html)
-- Galería de Imágenes (imgs/index.html)
-
-Archivos incluidos:
-- index.html
-- inicio.html
-- perfil.html
-- tags.html
-- about.html
-- imgs/index.html
-- imgs/copyy.jpeg
-- package.json
-
-Creado para la materia TC2005B - Desarrollo Web
-2026
