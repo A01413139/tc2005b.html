@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicio</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Inicio</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container">
-    <a class="navbar-brand" href="index.html">Mi Sitio</a>
+    <a class="navbar-brand" href="inicio.html">Mi Sitio</a>
     <div>
       <a class="nav-link text-white d-inline" href="inicio.html">Inicio</a>
       <a class="nav-link text-white d-inline" href="perfil.html">Perfil</a>
@@ -19,21 +19,27 @@
     </div>
   </div>
 </nav>
-    <h1>Inicio</h1>
 
-    <nav>
-        <ul>
-            <li><a href="index.html">Login</a></li>
-            <li><a href="inicio.html">Inicio</a></li>
-            <li><a href="perfil.html">Perfil</a></li>
-            <li><a href="tags.html">Tags</a></li>
-            <li><a href="about.html">About</a></li>
-        </ul>
-    </nav>
+<div class="container mt-4">
+  <h1>Inicio</h1>
+  <p id="bienvenida"></p>
 
-    <p>Actividad - Práctica con HTML</p>
-    <p>Proyecto de bloque <strong>TC2005B</strong>.</p>
-    <p>16<sub>FEBRERO</sub>2026</p>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  <button id="btnLogout" class="btn btn-danger">Cerrar sesión</button>
+</div>
+
+<script>
+  const user = localStorage.getItem("loggedInUser");
+  if (!user) {
+    window.location.href = "index.html"; 
+  } else {
+    document.getElementById("bienvenida").textContent = `Bienvenido, ${user}`;
+  }
+
+  document.getElementById("btnLogout").addEventListener("click", () => {
+    localStorage.removeItem("loggedInUser");
+    window.location.href = "index.html";
+  });
+</script>
+
 </body>
 </html>
